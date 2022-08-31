@@ -1,0 +1,5 @@
+$ pip install django 
+$ ''     ''   Pillow
+$ ''     ''   django-ckeditor
+
+$ pip freeze > requires...
