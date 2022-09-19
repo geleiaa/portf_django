@@ -20,8 +20,8 @@ class Skill(models.Model):
 class UserProfile(models.Model):
 
     class Meta:
-        verbose_name_plural = 'User Profiles'
-        verbose_name = 'User Profile'
+        verbose_name_plural = 'Perfil Usuario'
+        verbose_name = 'Perfil Usuario'
     
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     avatar = models.ImageField(blank=True, null=True, upload_to="avatar")
@@ -37,8 +37,8 @@ class UserProfile(models.Model):
 class ContactProfile(models.Model):
     
     class Meta:
-        verbose_name_plural = 'Contact Profiles'
-        verbose_name = 'Contact Profile'
+        verbose_name_plural = 'Perfil Contato'
+        verbose_name = 'Perfil Contato'
         ordering = ["timestamp"]
     timestamp = models.DateTimeField(auto_now_add=True)
     name = models.CharField(verbose_name="Name",max_length=100)
@@ -53,8 +53,8 @@ class ContactProfile(models.Model):
 class Testimonial(models.Model):
 
     class Meta:
-        verbose_name_plural = 'Testimonials'
-        verbose_name = 'Testimonial'
+        verbose_name_plural = 'Depoimentos'
+        verbose_name = 'Depoimentos'
         ordering = ["name"]
 
     thumbnail = models.ImageField(blank=True, null=True, upload_to="testimonials")
@@ -89,7 +89,7 @@ class Media(models.Model):
 class Portfolio(models.Model):
 
     class Meta:
-        verbose_name_plural = 'Portfolio Profiles'
+        verbose_name_plural = 'Perfil Portfolio'
         verbose_name = 'Portfolio'
         ordering = ["name"]
     date = models.DateTimeField(blank=True, null=True)
@@ -115,7 +115,7 @@ class Portfolio(models.Model):
 class Blog(models.Model):
 
     class Meta:
-        verbose_name_plural = 'Blog Profiles'
+        verbose_name_plural = 'Perfil Blog'
         verbose_name = 'Blog'
         ordering = ["timestamp"]
 
@@ -143,8 +143,8 @@ class Blog(models.Model):
 class Certificate(models.Model):
 
     class Meta:
-        verbose_name_plural = 'Certificates'
-        verbose_name = 'Certificate'
+        verbose_name_plural = 'Certificados'
+        verbose_name = 'Certificados'
 
     date = models.DateTimeField(blank=True, null=True)
     name = models.CharField(max_length=50, blank=True, null=True)
